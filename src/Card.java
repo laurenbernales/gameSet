@@ -10,7 +10,7 @@ public class Card {
 
     int color, shape, quantity, shade;
 
-    public Card(int color, int shape, int quantity, int shade){
+    public Card(int color, int shape, int shade, int quantity){
         this.color = color;
         this.shade = shade;
         this.shape = shape;
