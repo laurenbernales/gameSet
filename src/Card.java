@@ -17,21 +17,10 @@ public class Card {
         this.quantity = quantity;
     }
 
-    // Getter methods, use these to retrieve card values.
+    // Getter method, returns the 4 features of a card in an array
 
-    private int getColor(){
-        return color;
-    }
-
-    private int getShape(){
-        return shape;
-    }
-
-    private int getShade(){
-        return shade;
-    }
-
-    private int getQuantity(){
-        return quantity;
+    public int[] getFeatures(){
+        int[] featureArray = {color, shape, shade, quantity};
+        return featureArray;
     }
 }
