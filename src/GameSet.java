@@ -1,9 +1,18 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameSet {
     public static void main(String[] args) {
         Deck deck = new Deck(); // Create a Deck of 81 cards.
         deck.shuffleDeck();
+
+        // TODO: Network interface, see how many players are in the game.
+        int numPlayers = 0;
+        List<Player> playersInGame = new ArrayList<Player>();
+
+        for (int i=0; i < numPlayers; i++){
+            playersInGame.add(new Player());
+        }
     }
 
     // This method takes as an input a List<Card> and confirms whether or not it's a set
