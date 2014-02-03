@@ -21,6 +21,7 @@ public class Deck {
                 }
             }
         }
+        shuffleDeck();
     }
 
     // This method retrieves a particular card in the deck
@@ -40,5 +41,12 @@ public class Deck {
             cardsInDeck.set(index, cardsInDeck.get(i));
             cardsInDeck.set(i, placeholder);
         }
+    }
+
+    // Returns a Card and removes that Card from the deck.
+    public Card distributeCard(){
+        Card drawnCard = cardsInDeck.get(0);
+        cardsInDeck.remove(0);
+        return drawnCard;
     }
 }
