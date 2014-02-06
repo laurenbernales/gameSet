@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-//jenifer was here
+
 public class Player {
     int points = 0;
     String playerName;
@@ -42,7 +42,7 @@ public class Player {
     }
 
     // This method takes as an input a List<Card> and confirms whether or not it's a set
-    public boolean confirmCards(List<Card> cardTriplet) {
+    public static boolean confirmCards(List<Card> cardTriplet) {
         // First check to be certain that three cards have been selected
         if (cardTriplet.size() != 3) {
             // TODO: Here it will print a message saying that an invalid selection has been made
