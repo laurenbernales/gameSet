@@ -41,7 +41,7 @@ public class GameSet {
 
     public static boolean noSetsOnBoard(List<Card> cardsInPlay) {
         //If there are no sets return true
-    	boolean containsnoset = true; 
+    	boolean containsNoSet = true;
     	for (int i = cardsInPlay.size()-1; i > -1; i--){
     		for (int j = cardsInPlay.size()-1; j > -1; j--){
     			for (int k = cardsInPlay.size()-1; k > -1; k--){
@@ -51,15 +51,15 @@ public class GameSet {
     			        cardSet.add(cardsInPlay.get(i));
     			        cardSet.add(cardsInPlay.get(j));
     			        cardSet.add(cardsInPlay.get(k));
-    					boolean containset = Player.confirmCards(cardSet);
-    					if (containset == true){
-    						containsnoset = false; 
+    					boolean containSet = Player.confirmCards(cardSet);
+    					if (containSet == true){
+    						containsNoSet = false;
     					}
     				}
     			}
     		}	
     	}
-    	return containsnoset;
+    	return containsNoSet;
     } 
 
     public static boolean isThereMoreThanTwelve(List<Card> cardsInPlay) {
