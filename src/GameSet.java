@@ -5,7 +5,6 @@ public class GameSet {
     public static void main(String[] args) {
         Deck deck = new Deck(); // Create a Deck of 81 cards.
         Graphics graphics = new Graphics();
-        graphics.setOpaque(true);
 
         //testing for confirmCards
         //List<Card> cardSet = new ArrayList<Card>();
