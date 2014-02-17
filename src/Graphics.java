@@ -76,7 +76,7 @@ public class Graphics {
         StringBuffer choices;
 
         public CheckPane() {
-            super(new BorderLayout());
+//            super(new BorderLayout());
 
             chinButton = new JCheckBox("Chin");
             chinButton.setMnemonic(KeyEvent.VK_C);
