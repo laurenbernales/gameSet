@@ -41,21 +41,27 @@ public class GraphicsLobby extends JFrame {
 
     public class ButtonPane extends JPanel implements ActionListener {
         public ButtonPane() {
-            Dimension buttonDimension = new Dimension(150, 40);
+        	super (new GridBagLayout());
+        	
+        		GridBagConstraints c = new GridBagConstraints();
+            	Dimension buttonDimension = new Dimension(150, 100);
 
-            joinButton = new JButton("Join Game");
-            joinButton.setPreferredSize(buttonDimension);
-            joinButton.setMnemonic(KeyEvent.VK_D);
-            joinButton.setActionCommand(JOIN);
-            joinButton.addActionListener(this);
+            	joinButton = new JButton("Join Game");
+            	joinButton.setPreferredSize(buttonDimension);
+            	joinButton.setMnemonic(KeyEvent.VK_D);
+            	joinButton.setActionCommand(JOIN);
+            	joinButton.addActionListener(this);
+            	c.gridx = 0;
+            	c.gridy = 0;
+            	add(joinButton,c);
 
-            leaveButton = new JButton("Leave Game");
-            leaveButton.setPreferredSize(buttonDimension);
-            leaveButton.setMnemonic(KeyEvent.VK_M);
-            leaveButton.addActionListener(this);
-
-            add(joinButton);
-            add(leaveButton);
+            	leaveButton = new JButton("Leave Game");
+            	leaveButton.setPreferredSize(buttonDimension);
+            	leaveButton.setMnemonic(KeyEvent.VK_M);
+            	leaveButton.addActionListener(this);
+            	c.gridx = 0;
+            	c.gridy = 1;
+            	add(leaveButton, c);
         }
 
         @Override
