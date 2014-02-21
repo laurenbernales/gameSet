@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
-public class GraphicsLobby {
+public class GraphicsLobby extends JFrame {
 
     private JButton joinButton, leaveButton;
     private final String JOIN = "join";
@@ -19,19 +19,24 @@ public class GraphicsLobby {
     }
 
     private void createAndShowGUI() {
-        JFrame frame = new JFrame("Button Demo");
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setPreferredSize(new Dimension(600, 600));
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new Dimension(600, 600));
+        setTitle("Game Set");
 
         ButtonPane buttonPane = new ButtonPane();
-        buttonPane.setOpaque(true);
         TextPane textPane = new TextPane();
 
-        frame.setContentPane(buttonPane);
-        frame.add(textPane);
+        getContentPane().setLayout(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
 
-        frame.pack();
-        frame.setVisible(true);
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+
+
+        setContentPane(buttonPane);
+        add(textPane);
+
+        pack();
+        setVisible(true);
     }
 
     public class ButtonPane extends JPanel implements ActionListener {
