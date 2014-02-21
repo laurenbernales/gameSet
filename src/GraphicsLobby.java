@@ -2,11 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Graphics {
+public class GraphicsLobby {
 
     private JButton b1, b2, b3;
 
-    public Graphics() {
+    public GraphicsLobby() {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -67,7 +67,6 @@ public class Graphics {
     }
 
     public class CheckPane extends JPanel implements ItemListener {
-
         JCheckBox chinButton;
         JCheckBox glassesButton;
         JCheckBox hairButton;
@@ -76,8 +75,6 @@ public class Graphics {
         StringBuffer choices;
 
         public CheckPane() {
-//            super(new BorderLayout());
-
             chinButton = new JCheckBox("Chin");
             chinButton.setMnemonic(KeyEvent.VK_C);
             chinButton.setSelected(true);
@@ -108,7 +105,7 @@ public class Graphics {
             checkPanel.add(teethButton);
 
             add(checkPanel, BorderLayout.LINE_START);
-            setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+            setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         }
 
         @Override
