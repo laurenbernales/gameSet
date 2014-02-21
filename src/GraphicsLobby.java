@@ -93,7 +93,6 @@ public class GraphicsLobby {
             String text = textField.getText();
             textArea.append(text + NEW_LINE);
             textField.selectAll();
-
             textArea.setCaretPosition(textArea.getDocument().getLength());
         }
     }
