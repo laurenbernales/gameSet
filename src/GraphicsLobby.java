@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 public class GraphicsLobby extends JFrame {
 
@@ -25,29 +26,27 @@ public class GraphicsLobby extends JFrame {
         setPreferredSize(new Dimension(600, 600));
         setTitle("Game Set");
 
-//        try {
-//            getContentPane().add(new ImageSet());
-//        } catch (IOException e) {
-//            System.out.println("Image not found");
-//        }
+        setLayout(new BorderLayout());
+        JLabel background = new JLabel(new ImageIcon("/home/scibor/Cooper/Software/gameSet/images/gameSetBackground.jpg"));
+        add(background);
 
         ButtonPane buttonPane = new ButtonPane();
         TextPane textPane = new TextPane();
 
-        getContentPane().setLayout(new GridBagLayout());
+        background.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
 
         constraints.insets = new Insets(5, 5, 5, 5);
         constraints.gridx = 0;
         constraints.gridy = 0;
 
-        add(buttonPane, constraints);
+        background.add(buttonPane, constraints);
 
         constraints.insets = new Insets(5, 5, 5, 5);
         constraints.gridx = 2;
         constraints.gridy = 0;
 
-        add(textPane, constraints);
+        background.add(textPane, constraints);
 
         pack();
         setVisible(true);
@@ -91,7 +90,7 @@ public class GraphicsLobby extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if (JOIN.equals(e.getActionCommand())) {
                 String text = textField.getText();
-                if(text.trim().length() == 0) {
+                if (text.trim().length() == 0) {
                     textField.setText("");
 
                 } else {
