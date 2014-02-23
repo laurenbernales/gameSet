@@ -6,8 +6,6 @@ public class Card {
     for details as per value mapping.
      */
 
-    // TODO: Optionally we can instead of int use either enum or hashMap, that would read easier
-
     int color, shape, quantity, shade;
 
     public Card(int color, int shape, int shade, int quantity) {
