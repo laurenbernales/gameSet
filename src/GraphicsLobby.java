@@ -92,12 +92,14 @@ public class GraphicsLobby extends JFrame {
                 String text = textField.getText();
                 if (text.trim().length() == 0) {
                     textField.setText("");
-
                 } else {
                     textArea.append(text + "\n");
                     textField.setText("");
+                    GlobalVariables.gamePlayers.add(new Player(text));
+                    // TODO: This is pretty close, needs to be refined for networking capabilities
                 }
             } else {
+                // TODO: Leave game button
             }
         }
     }
