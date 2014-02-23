@@ -10,6 +10,7 @@ public class GraphicsLobby extends JFrame {
     private JTextField textField;
     private JTextArea textArea;
     private final String JOIN = "join";
+    private final Dimension PREFERRED_SIZE = new Dimension(800, 800);
 
     public GraphicsLobby() {
         SwingUtilities.invokeLater(new Runnable() {
@@ -22,11 +23,12 @@ public class GraphicsLobby extends JFrame {
 
     private void createAndShowGUI() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(600, 600));
+        setPreferredSize(PREFERRED_SIZE);
         setTitle("Game Set");
 
         setLayout(new BorderLayout());
         JLabel background = new JLabel(new ImageIcon("/home/scibor/Cooper/Software/gameSet/images/gameSetBackground.jpg"));
+        background.setPreferredSize(PREFERRED_SIZE);
         add(background);
 
         ButtonPane buttonPane = new ButtonPane();
@@ -39,12 +41,14 @@ public class GraphicsLobby extends JFrame {
         constraints.gridx = 0;
         constraints.gridy = 0;
 
+        buttonPane.setOpaque(false);
         background.add(buttonPane, constraints);
 
         constraints.insets = new Insets(0, 5, 5, 0);
         constraints.gridx = 2;
         constraints.gridy = 0;
 
+        textPane.setOpaque(false);
         background.add(textPane, constraints);
 
         pack();
