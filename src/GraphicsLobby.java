@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.io.IOException;
 
 public class GraphicsLobby extends JFrame {
 
@@ -36,13 +35,13 @@ public class GraphicsLobby extends JFrame {
         background.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
 
-        constraints.insets = new Insets(5, 5, 5, 5);
+        constraints.insets = new Insets(0, 5, 5, 0);
         constraints.gridx = 0;
         constraints.gridy = 0;
 
         background.add(buttonPane, constraints);
 
-        constraints.insets = new Insets(5, 5, 5, 5);
+        constraints.insets = new Insets(0, 5, 5, 0);
         constraints.gridx = 2;
         constraints.gridy = 0;
 
@@ -67,7 +66,7 @@ public class GraphicsLobby extends JFrame {
             joinButton.setActionCommand(JOIN);
             joinButton.addActionListener(this);
 
-            constraints.insets = new Insets(5, 5, 5, 5);
+            constraints.insets = new Insets(0, 0, 5, 0);
             constraints.gridx = 0;
             constraints.gridy = 0;
 
@@ -80,6 +79,7 @@ public class GraphicsLobby extends JFrame {
             leaveButton.setMnemonic(KeyEvent.VK_M);
             leaveButton.addActionListener(this);
 
+            constraints.insets = new Insets(0, 0, 0, 0);
             constraints.gridx = 0;
             constraints.gridy = 1;
 
