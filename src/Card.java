@@ -24,6 +24,11 @@ public class Card {
         return featureArray;
     }
 
+    /* This method will take a Card object with quantities defined, read those
+    values, and return a String that corresponds to the file name of an
+    image of that particular Card.
+     */
+
     public String getImageName() {
         String colorString, shapeString, shadeString, quantityString;
 
